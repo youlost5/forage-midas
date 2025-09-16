@@ -9,5 +9,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - run: chmod +x mvnw || true
-      - run: ./mvnw -q -Dtest=TaskOneTests test || mvn -q -Dtest=TaskOneTests test
+      - run: |
+      chmod +x mvnw || true
+    ./mvnw -q -e -DfailIfNoTests=false test || mvn -q -e -DfailIfNoTests=false test
