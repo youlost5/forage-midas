@@ -1,3 +1,6 @@
+name: Run TaskOneTests
+on:
+  workflow_dispatch:  # lets you press "Run workflow" in Actions
 jobs:
   test:
     runs-on: ubuntu-latest
